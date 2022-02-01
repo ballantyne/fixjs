@@ -4,8 +4,9 @@ var assert = require('assert');
 var after = require('after');
 var through = require('through2');
 var duplexer = require('duplexer2');
+var path = require('path');
 
-var fix = require('..');
+var fix = require(path.join(__dirname, '..'));
 var Msgs = fix.Msgs;
 
 suite('admin');

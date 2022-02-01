@@ -1,7 +1,7 @@
 /// fix message
 
 var moment = require('moment');
-
+var path = require('path');
 // convert a date object into a fix formatted timestamp
 var getUTCTimeStamp = function(date){
     return moment(date).utc().format('YYYYMMDD-HH:mm:ss.SSS');
@@ -121,7 +121,7 @@ Msg.checksum = function(str) {
 };
 
 Msg.parse = function(raw) {
-    var Msgs = require('./msgs');
+    var Msgs = require(path.join(__dirname, 'msgs'));
 
     var fix = {};
     var keyvals = raw.split(Msg.kFieldSeparator);

@@ -1,6 +1,7 @@
 var after = require('after');
 var assert = require('assert');
-var Msgs = require('../src/msgs');
+var path = require('path');
+var Msgs = require(path.join(__dirname, '..','src','msgs'));
 
 suite('serialization');
 

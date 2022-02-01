@@ -1,6 +1,6 @@
 var through = require('through2');
-
-var Msg = require('./msg');
+var path = require('path');
+var Msg = require(path.join(__dirname, 'msg'));
 
 var kFieldSeparator = Msg.kFieldSeparator;
 
